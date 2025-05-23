@@ -1,0 +1,41 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.primary {
+  background: #0066cc;
+  color: white;
+}
+
+.primary:hover {
+  background: #0052a3;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.button {
+  min-width: 120px;
+  max-width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 0.875rem 1.5rem;
+  }
+}

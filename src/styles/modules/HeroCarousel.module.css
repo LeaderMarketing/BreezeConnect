@@ -1,0 +1,140 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-top: var(--spacing-4xl);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(var(--color-slate-900), 0.7) 0%, 
+    rgba(var(--color-slate-900), 0.4) 50%, 
+    rgba(var(--color-slate-900), 0.2) 100%);
+  z-index: 1;
+}
+
+.slideContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  color: var(--color-slate-50);
+  width: 100%;
+  padding: var(--spacing-md) 0;
+}
+
+.slideHeading {
+  color: var(--color-slate-50);
+  font-size: var(--font-size-5xl);
+  max-width: 800px;
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+}
+
+.slideDescription {
+  font-size: var(--font-size-xl);
+  max-width: 600px;
+  color: var(--color-slate-50);
+  opacity: 0.9;
+  line-height: var(--line-height-relaxed);
+}
+
+.indicators {
+  position: absolute;
+  bottom: var(--spacing-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--spacing-md);
+  z-index: 2;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--color-slate-50);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 40px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-slate-50);
+  transform-origin: left;
+  animation: fillProgress 5s linear forwards;
+}
+
+.progressFill.reset {
+  animation: none;
+  width: 0;
+}
+
+@keyframes fillProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .slideHeading {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 500px;
+    margin-top: var(--spacing-3xl);
+  }
+
+  .slideHeading {
+    font-size: var(--font-size-4xl);
+  }
+
+  .slideDescription {
+    font-size: var(--font-size-base);
+  }
+}
