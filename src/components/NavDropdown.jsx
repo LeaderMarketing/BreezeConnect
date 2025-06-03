@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from '../styles/modules/Nav.module.css';
 
-const NavDropdown = ({ label, children, isMobile, onMobileMenuClose }) => {
+const NavDropdown = ({ label, children, isMobile, onMobileMenuClose, isPlansMenu }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
@@ -16,9 +16,8 @@ const NavDropdown = ({ label, children, isMobile, onMobileMenuClose }) => {
     setIsOpen(false);
     onMobileMenuClose?.();
   }, [onMobileMenuClose]);
-
   const handleResize = useCallback(() => {
-    if (window.innerWidth > 768 && isMobile) {
+    if (window.innerWidth > 1100 && isMobile) {
       onMobileMenuClose?.();
     }
     setIsOpen(false);
@@ -53,13 +52,8 @@ const NavDropdown = ({ label, children, isMobile, onMobileMenuClose }) => {
               <span className={styles.mobileBackArrow} />
             </button>
             <div className={styles.mobileSubmenuTitle}>{label}</div>
-          </div>
-          <div className={styles.mobileSubmenuContent}>
-            {React.Children.map(children, (child, index) => (
-              React.cloneElement(child, {
-                className: `${child.props.className} ${styles.mobileSubmenuItem}`
-              })
-            ))}
+          </div>          <div className={styles.mobileSubmenuContent}>
+            {children}
           </div>
         </div>
       </>
@@ -79,12 +73,11 @@ const NavDropdown = ({ label, children, isMobile, onMobileMenuClose }) => {
         >
           {label}
         </div>
-      </div>
-      <div className={`${styles.dropdownContainer} ${isOpen ? styles.dropdownActive : ''}`}>
+      </div>      <div className={`${styles.dropdownContainer} ${isOpen ? styles.dropdownActive : ''}`}>
         <div className={styles.dropdownBackground}>
           <div className={`container ${styles.dropdownContent}`}>
           <div className={styles.dropdownMenu}>
-            <div className={styles.dropdownHeader}>{label}</div>
+            {!isPlansMenu && <div className={styles.dropdownHeader}>{label}</div>}
             <div className={styles.dropdownItems}>
               {React.Children.map(children, (child, index) => (
                 React.cloneElement(child, {

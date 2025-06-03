@@ -1,6 +1,6 @@
 .productSection {
   padding: var(--spacing-4xl) var(--spacing-2xl);
-  background-color: transparent;
+  background-color: var(--color-slate-50);
   overflow-x: hidden;
 }
 
@@ -30,7 +30,7 @@
 
 .categoryTab {
   padding: var(--spacing-md) var(--spacing-xl);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-secondary);
   background: none;

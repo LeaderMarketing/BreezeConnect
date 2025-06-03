@@ -1,0 +1,380 @@
+.bottomMenu {
+  background-color: var(--color-slate-900); /* Dark background */
+  color: var(--color-slate-300); /* Light text for contrast */
+  padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+  font-size: var(--font-size-sm);
+}
+
+.bottomMenuContainer {
+  /* Uses .container class from global.css for max-width and padding */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+/* Top Section: Logo and CTA */
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-slate-700);
+}
+
+.logoArea {
+  /* Assuming Logo component has its own styling */
+  flex-shrink: 0;
+}
+
+.ctaArea {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.ctaText {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-100);
+}
+
+.callText {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-100);
+}
+
+/* .ctaPhone class is no longer used directly, styles are handled by Button component and .ctaPhoneButton */
+
+.ctaPhoneButton {
+  /* Use the same styling as login button */
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  background-color: var(--color-brand-blue);
+  color: var(--color-slate-50);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: all 0.2s ease;
+}
+
+.ctaPhoneButton:hover {
+  background-color: #2b6cb0;
+  color: var(--color-slate-50);
+}
+
+.phoneIcon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1); /* Make icon white */
+}
+
+/* Main Content: Link Columns */
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.columnTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-slate-100); /* Brighter for titles */
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.linkColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.linkColumn li a {
+  color: var(--color-slate-300);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.linkColumn li a:hover {
+  color: var(--color-brand-orange);
+  text-decoration: underline;
+}
+
+.companyDetails {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-slate-400);
+}
+
+.companyDetails p {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Bottom Section: Copyright, Legal, Social */
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-xs); /* Reduced from var(--spacing-sm) for smaller area */
+  padding-bottom: var(--spacing-xs); /* Added small bottom padding */
+  font-size: var(--font-size-xs);
+  color: var(--color-slate-400);
+}
+
+.copyright {
+  flex-basis: 100%;
+  text-align: left;
+  order: 1; /* Copyright first on small screens */
+}
+
+.legalLinks {
+  flex-basis: 100%;
+  text-align: center;
+  order: 2; /* Legal links second */
+  margin: var(--spacing-xs) 0; /* Reduced from var(--spacing-sm) */
+}
+
+.legalLinks a {
+  color: var(--color-slate-400);
+  text-decoration: none;
+  margin: 0 var(--spacing-xs);
+  transition: color 0.2s ease-in-out;
+}
+
+.legalLinks a:hover {
+  color: var(--color-brand-orange);
+  text-decoration: underline;
+}
+
+.legalLinks span {
+  color: var(--color-slate-500);
+}
+
+.socialIcons {
+  flex-basis: 100%;
+  text-align: right;
+  order: 3; /* Social icons third */
+}
+
+.socialIconLink {
+  color: var(--color-slate-400);
+  margin-left: var(--spacing-sm); /* Reduced from var(--spacing-md) */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.socialIconLink:first-child {
+  margin-left: 0;
+}
+
+.socialIconLink:hover {
+  color: var(--color-brand-orange);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(87%) contrast(87%); /* Makes icon slate-400 color */
+  transition: filter 0.2s ease-in-out;
+}
+
+.socialIconLink:hover .socialIcon {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(89%) saturate(2475%) hue-rotate(7deg) brightness(102%) contrast(101%); /* Makes icon orange on hover */
+}
+
+/* Membership/Alliance Section */
+.membershipSection {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-slate-700);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.membershipTitle {
+  width: 300px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-300);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.membershipLogos {
+  display: flex;
+  gap: var(--spacing-4xl);
+  align-items: center;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.membershipLogoLink {
+  transition: all 0.3s ease;
+}
+
+.membershipLogo {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.membershipLogoLink:hover .membershipLogo {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(89%) saturate(2475%) hue-rotate(7deg) brightness(102%) contrast(101%); /* brand-orange color */
+}
+
+/* Main Content Area - 5 Columns */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: var(--spacing-2xl);
+}
+
+/* Company Column (First Column) */
+.companyColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.logoWrapper {
+  max-width: 200px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.bottomMenuLogo {
+  width: 100%;
+  height: auto;
+}
+
+.logoWrapper {
+  max-width: 200px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.companySlogan {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  color: var(--color-slate-50);
+}
+
+.companySlogan p {
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.ctaArea {
+  margin: var(--spacing-md) 0;
+}
+
+.ctaPhoneButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.addressBlock {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.3;
+}
+
+.addressBlock p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-slate-300);
+  white-space: nowrap;
+}
+
+.copyright {
+  flex-basis: 100%;
+  text-align: left;
+  order: 1;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments for CTA area */
+@media (max-width: 768px) {
+  .ctaArea {
+    justify-content: center;
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .membershipSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+  }
+  
+  .membershipLogos {
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: flex-start;
+  }
+
+  .membershipLogo {
+    height: 35px;
+  }
+  
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .companyColumn {
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .companyColumn {
+    grid-column: span 2;
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .mainContent {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+  
+  .companyColumn {
+    grid-row: span 2;
+  }
+}

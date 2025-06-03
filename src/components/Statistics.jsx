@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/modules/Statistics.module.css';
+import Lottie from 'lottie-react';
+import slaAnimation from '../assets/animated icons/sla.json';
+import supportAnimation from '../assets/animated icons/support.json';
+import usersAnimation from '../assets/animated icons/users.json';
 
 const AnimatedNumber = ({ end, suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -53,11 +57,21 @@ const AnimatedNumber = ({ end, suffix = '' }) => {
 };
 
 const Statistics = () => {
+  const iconStyle = { width: 200, height: 200 }; // Make icons big
+  
   return (
     <section className={styles.container}>
       <div className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.statCard}>
+            <div className={styles.iconContainer}>
+              <Lottie
+                animationData={slaAnimation}
+                style={iconStyle}
+                loop={true}
+                autoplay={true}
+              />
+            </div>
             <AnimatedNumber end={99} suffix="%" />
             <h3>Uptime SLA</h3>
             <p className={styles.description}>
@@ -66,12 +80,30 @@ const Statistics = () => {
           </div>
 
           <div className={styles.statCard}>
+            <div className={styles.iconContainer}>
+              <Lottie
+                animationData={supportAnimation}
+                style={iconStyle}
+                loop={true}
+                autoplay={true}
+              />
+            </div>
             <AnimatedNumber end={100} suffix="%" />
             <h3>Local Expert Support</h3>
             <p className={styles.description}>
               Access Australian-based technical experts certified in 3CX Adv, SIP SSCA, Yealink, UniFi and more.
             </p>
-          </div>          <div className={styles.statCard}>
+          </div>
+          
+          <div className={styles.statCard}>
+            <div className={styles.iconContainer}>
+              <Lottie
+                animationData={usersAnimation}
+                style={iconStyle}
+                loop={true}
+                autoplay={true}
+              />
+            </div>
             <AnimatedNumber end={10000} suffix="+" />
             <h3>Active Users</h3>
             <p className={styles.description}>

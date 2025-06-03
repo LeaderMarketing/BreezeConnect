@@ -8,42 +8,42 @@ const productCategories = {
       id: 1,
       name: "SIP TRUNKS",
       description: "Cost-effective, flexible voice connectivity with high reliability and scalability for your business communications.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/sip-trunks.jpg"
     },    
     {
       id: 2,
       name: "BREEZE HOSTED 3CX",
       description: "Fully managed 3CX phone system in the cloud with no hardware to maintain and simple per-user pricing.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/hosted-3cx.jpg"
     },
     {
       id: 3,
       name: "HOSTED PBX",
       description: "Enterprise-grade cloud phone system with advanced features and no upfront hardware investments.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/hosted-pbx.jpg"
     },    
     {
       id: 4,
       name: "BREEZE TEAMS VOICE",
       description: "Integrate professional calling capabilities directly into your Microsoft Teams environment.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/teams-voice.jpg"
     },
     {
       id: 5,
       name: "INBOUND SERVICES",
       description: "Professional 1300 and 1800 numbers to enhance your business presence across Australia.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/inbound-services.jpg"
     },
     {
       id: 13,
       name: "BREEZE WHOLESALE",
       description: "Join our league of wholesale VoIP providers with SIP services at competitive rates to maximize revenue in today's market.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/wholesale.jpg"
     }
   ],  
@@ -52,21 +52,21 @@ const productCategories = {
       id: 6,
       name: "BUSINESS NBN",
       description: "High-speed, reliable internet connectivity designed specifically for business applications.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/business-nbn.jpg"
     },
     {
       id: 7,
       name: "CORPORATE FIBRE",
       description: "Enterprise-grade fibre connectivity with guaranteed bandwidth and 99.95% uptime SLA.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/corporate-fibre.jpg"
     },
     {
       id: 8,
       name: "DATA SIM FAILOVER",
       description: "Automatic 4G/5G backup connectivity ensuring your business stays online even during primary connection outages.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/data-sim.jpg"
     }  
   ],  
@@ -75,28 +75,28 @@ const productCategories = {
       id: 10,
       name: "SMS BROADCASTING",
       description: "Mass communication platform for sending targeted text messages to customers and stakeholders.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/sms-broadcasting.jpg"
     },
     {
       id: 11,
       name: "VOIP HANDSETS",
       description: "Premium IP phones from leading brands, preconfigured for plug-and-play deployment.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/voip-handsets.jpg"
     },
     {
       id: 12,
       name: "BUSINESS HEADSETS",
       description: "Professional-grade headsets from Yealink, Jabra and other top brands for clear communication.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/business-headsets.jpg"
     },
     {
       id: 14,
       name: "PRE-CONFIGURATION",
       description: "Let our certified local experts help you sell & setup turn-key VoIP solutions with 3CX, Grandstream, Yealink & Fanvil phone systems.",
-      color: "#001c37",
+      color: "#00274f",
       imageUrl: "/images/products/pre-configuration.jpg"
     }
   ]

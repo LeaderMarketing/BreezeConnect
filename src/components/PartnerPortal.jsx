@@ -8,12 +8,13 @@ const PartnerPortal = () => {
       id: 0,
       title: "Easy Customer Management",
       description: "Manage your customers with our intuitive interface. Add new customers, update details, and view their service history all in one place.",
-      image: "https://breezeconnect.com.au/wp-content/uploads/2025/05/partner-portal-placeholder.png" 
+      image: "https://breezeconnect.com.au/wp-content/uploads/2025/05/partner-portal-placeholder.png",
+      video: "/BreezeConnect/assets/portaldemo_1.mp4"
     },
     {
       id: 1,
-      title: "Order Services Directly",
-      description: "Order new services like numbers and NBN directly from the portal. No need to use multiple systems or make phone calls.",
+      title: "Order Seamlessly",
+      description: "Order new services like numbers and NBN directly from the portal. No need to use multiple systems or make phone calls to sales.",
       image: "/placeholder-product-1.jpg"
     },
     {
@@ -68,28 +69,39 @@ const PartnerPortal = () => {
                   <span className={styles.accordionArrow}></span>
                 </div>                {activeItem === feature.id && (
                   <div className={styles.accordionContent}>
-                    <p>{feature.description}</p>
-                    <div className={styles.mobileImageContainer}>
-                      <img 
-                        src={feature.image} 
-                        alt={feature.title} 
-                        className={styles.mobileFeatureImage}
-                      />
+                    <p>{feature.description}</p>                    <div className={styles.mobileImageContainer}>                      {feature.video ? (
+                        <div className={styles.animationContainer}>
+                          <video
+                            src={feature.video}
+                            className={styles.portalVideo}
+                            autoPlay
+                            loop
+                            playsInline
+                          />
+                        </div>
+                      ) : (
+                        <img 
+                          src={feature.image} 
+                          alt={feature.title} 
+                          className={styles.mobileFeatureImage}
+                        />
+                      )}
                     </div>
                   </div>
                 )}
               </div>
-            ))}
-          </div>
-            <div className={styles.imageContainer}>
-            {activeItem !== null && (
-              <img 
-                src={portalFeatures[activeItem]?.image || "/placeholder-product-1.jpg"} 
-                alt={portalFeatures[activeItem]?.title} 
-                className={styles.featureImage}
+            ))}          </div>            
+          {activeItem !== null && (
+            <div className={styles.animationContainer}>
+              <video 
+                src={portalFeatures[activeItem].video}
+                className={styles.portalVideo}
+                autoPlay
+                loop
+                playsInline
               />
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

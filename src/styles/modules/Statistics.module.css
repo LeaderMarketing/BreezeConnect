@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacing-4xl) var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--spacing-2xl);
   background-color: var(--color-slate-50);
 }
 
@@ -19,13 +19,22 @@
   padding: var(--spacing-xl);
 }
 
+.iconContainer {
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
 .statCard h3 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-sm);
 }
 
 .number {
-  font-size: 5.5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--color-brand-blue);
   margin-bottom: var(--spacing-md);

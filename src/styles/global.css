@@ -66,9 +66,8 @@
   --spacing-2xl: 2.5rem;   /* 40px */
   --spacing-3xl: 3rem;     /* 48px */
   --spacing-4xl: 4rem;     /* 64px */
-
   /* Layout */
-  --container-width: 1248px;
+  --container-width: 1200px;
 }
 
 /* Base Styles */
@@ -81,6 +80,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -91,6 +91,7 @@ body {
   color: var(--color-text-secondary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Layout */
@@ -99,6 +100,12 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
 }
 
 /* Typography - Headlines */
@@ -181,8 +188,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-slate-900);
-  text-decoration: underline;
+  color: var(--color-brand-orange);
 }
 
 a:focus {
@@ -243,7 +249,7 @@ button {
 .leading-loose { line-height: var(--line-height-loose); }
 
 /* Responsive Typography */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   h1 { font-size: var(--font-size-4xl); }
   h2 { font-size: var(--font-size-3xl); }
   h3 { font-size: var(--font-size-2xl); }

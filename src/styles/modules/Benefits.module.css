@@ -1,5 +1,5 @@
 .benefitsSection {
-  padding: var(--spacing-4xl) var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--spacing-2xl);
   background-color: var(--color-slate-50);
   position: relative;
   overflow: hidden;
@@ -8,7 +8,7 @@
 .sectionHeader {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto var(--spacing-4xl);
+  margin: 0 auto var(--spacing-2xl);
 }
 
 .sectionTitle {
@@ -36,7 +36,7 @@
 .mainBenefitCard {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background: url('https://breezeconnect.com.au/wp-content/uploads/2022/02/leader.png');
+  background: url('https://jcardenasleader.wordpress.com/wp-content/uploads/2025/05/breeze_benefits_mainimage.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 16px;
@@ -48,7 +48,6 @@
   align-items: flex-end;
   justify-content: flex-start;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--color-slate-200);
 }
 
 .mainCardContent {
@@ -56,7 +55,6 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
 }
 
 .mainBenefitTitle {
@@ -78,18 +76,18 @@
   display: inline-block;
   background-color: white;
   color: var(--color-brand-blue);
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: var(--spacing-sm) var(--spacing-lg);
   border-radius: 50px;
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
 }
 
 .mainCardButton:hover {
   background-color: rgba(255, 255, 255, 0.95);
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -108,17 +106,11 @@
   padding: var(--spacing-xl);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--color-slate-200);
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.benefitCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .cardContent {
@@ -134,13 +126,21 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.iconContainer {
-  width: 48px;
-  height: 48px;
+.iconWrapper {
+  margin-bottom: var(--spacing-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-md);
+  width: 56px;
+  height: 56px;
+}
+
+.iconContainer {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   background-color: rgba(49, 130, 206, 0.1);
   color: var(--color-brand-blue);
