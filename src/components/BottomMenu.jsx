@@ -39,32 +39,34 @@ const membershipLogos = [
 // Navigation data for the 4 link columns
 const bottomMenuNavigation = {
   plans: [
-    'Sip Trunks',
+    'SIP Trunks',
+    '3CX Hosted',
     'Teams Voice',
-    'NBN and Corporate Fibre',
+    'Business NBN',
+    'Enterprise Ethernet',
+    'Mobile Data',
     'Wholesale',
-    'Breeze Hosted 3CX',
-    'Inbound Services'
+    'Inbound Services',
+    'SMS Broadcasting'
   ],
   solutions: [
-    'Hosted PBX',
-    '3CX',
-    'Phones (Handsets)',
-    'Headsets',
-    'Pre-Configuration',
-    'SMS Broadcasting',
-    '4G & 5G Data Sim'
+    '3CX Phone System',
+    'Phones & Headsets',
+    'Teams Rooms Solutions',
+    'Pre-Config & Pro Services'
   ],
   partner: [
     'Partner Portal',
     'Support Portal',
     'Become a Leader Reseller',
-    'Pay My Bill'
+    'Status',
+    'Our Policies and Terms'
   ],
   company: [
     'About Us',
     'Contact Us',
-    'Our Policies and Terms'
+    'Pay My Bill',
+    'MSP Program'
   ],
   legalLinks: [
     'Privacy Policy',

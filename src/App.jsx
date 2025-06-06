@@ -5,7 +5,6 @@ import TechPartners from './components/TechPartners';
 import ProductCarousel from './components/ProductCarousel';
 import Statistics from './components/Statistics';
 import Benefits from './components/Benefits';
-import Testimonials from './components/Testimonials'; //dkomuna iactive to
 import PartnerPortal from './components/PartnerPortal';
 import BottomMenu from './components/BottomMenu'; 
 import Footer from './components/Footer'; 
